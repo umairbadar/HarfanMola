@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -29,6 +28,7 @@
         android:orientation="vertical">
 
         <EditText
+            android:id="@+id/et_email"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/bg_edittext"
@@ -38,6 +38,7 @@
             android:padding="10dp" />
 
         <EditText
+            android:id="@+id/et_password"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
@@ -60,6 +61,7 @@
             android:typeface="monospace" />
 
         <TextView
+            android:id="@+id/tv_forgot_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -68,7 +70,8 @@
             android:textAllCaps="true"
             android:textColor="@color/black"
             android:textSize="18sp"
-            android:typeface="monospace" />
+            android:typeface="monospace"
+            android:onClick="onClick"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -111,25 +114,31 @@
             android:layout_gravity="center_horizontal">
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_facebook"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_facebook_logo"
                 android:foregroundGravity="center"
-                android:layout_margin="4dp"/>
+                android:layout_margin="4dp"
+                android:onClick="onClick"/>
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_twitter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_twitter"
                 android:foregroundGravity="center"
-                android:layout_margin="4dp"/>
+                android:layout_margin="4dp"
+                android:onClick="onClick"/>
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_googlePlus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_google_plus"
                 android:foregroundGravity="center"
-                android:layout_margin="4dp"/>
+                android:layout_margin="4dp"
+                android:onClick="onClick"/>
 
         </LinearLayout>
 
