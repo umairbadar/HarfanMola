@@ -13,22 +13,11 @@ import android.widget.Toast;
 
 public class WelcomeActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button btn_sign_up;
-    private TextView tv_sign_in;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
-        //Initialization Widgets
-        initWidgets();
-    }
-
-    private void initWidgets(){
-
-        btn_sign_up = findViewById(R.id.btn_sign_up);
-        tv_sign_in = findViewById(R.id.tv_sign_in);
     }
 
     @Override
