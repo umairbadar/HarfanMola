@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 public class SplashActivity extends AppCompatActivity {
 
     @Override
@@ -21,6 +23,7 @@ public class SplashActivity extends AppCompatActivity {
             public void run() {
                 Intent mainIntent = new Intent(SplashActivity.this,WelcomeActivity.class);
                 startActivity(mainIntent);
+                Animatoo.animateDiagonal(SplashActivity.this);
                 finish();
             }
         }, SPLASH_DISPLAY_LENGTH);

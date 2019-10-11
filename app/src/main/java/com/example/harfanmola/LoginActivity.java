@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -34,6 +36,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onBackPressed() {
         finish();
         startActivity(new Intent(getApplicationContext(),WelcomeActivity.class));
+        Animatoo.animateSlideDown(LoginActivity.this);
     }
 
     private boolean isEmailValid(String email) {

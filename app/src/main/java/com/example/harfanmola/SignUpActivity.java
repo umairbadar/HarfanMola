@@ -5,13 +5,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 
-import java.util.TooManyListenersException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -53,6 +51,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     public void onBackPressed() {
         finish();
         startActivity(new Intent(getApplicationContext(),WelcomeActivity.class));
+        Animatoo.animateSlideDown(SignUpActivity.this);
     }
 
     private boolean isEmailValid(String email) {

@@ -2,14 +2,11 @@ package com.example.harfanmola;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.Switch;
-import android.widget.TextView;
-import android.widget.Toast;
+
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 
 public class WelcomeActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -28,11 +25,13 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
             case R.id.btn_sign_up:
                 finish();
                 startActivity(new Intent(getApplicationContext(), SignUpActivity.class));
+                Animatoo.animateSlideUp(WelcomeActivity.this);
                 break;
 
             case R.id.tv_sign_in:
                 finish();
                 startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                Animatoo.animateSlideUp(WelcomeActivity.this);
                 break;
         }
     }
