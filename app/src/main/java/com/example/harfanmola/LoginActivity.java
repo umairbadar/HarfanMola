@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+import com.example.harfanmola.Hotel.HotelActivity;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -32,13 +33,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         et_password = findViewById(R.id.et_password);
     }
 
-    @Override
-    public void onBackPressed() {
-        finish();
-        startActivity(new Intent(getApplicationContext(),WelcomeActivity.class));
-        Animatoo.animateSlideDown(LoginActivity.this);
-    }
-
     private boolean isEmailValid(String email) {
         String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
         Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
@@ -47,12 +41,19 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     @Override
+    public void onBackPressed() {
+        finish();
+        startActivity(new Intent(getApplicationContext(),WelcomeActivity.class));
+        Animatoo.animateSlideDown(LoginActivity.this);
+    }
+
+    @Override
     public void onClick(View view) {
 
         switch (view.getId()){
 
             case R.id.btn_login:
-                if (TextUtils.isEmpty(et_email.getText().toString())){
+                /*if (TextUtils.isEmpty(et_email.getText().toString())){
                     et_email.setError("Please enter email address");
                     et_email.requestFocus();
                 } else if (!isEmailValid(et_email.getText().toString())){
@@ -64,7 +65,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 } else {
                     Toast.makeText(getApplicationContext(), "DONE",
                             Toast.LENGTH_LONG).show();
-                }
+                }*/
+                finish();
+                startActivity(new Intent(getApplicationContext(), HotelActivity.class));
+                Animatoo.animateSlideUp(LoginActivity.this);
                 break;
 
             case R.id.tv_forgot_password:
